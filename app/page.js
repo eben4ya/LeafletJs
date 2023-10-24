@@ -1,7 +1,11 @@
 import dynamic from "next/dynamic";
 
 const Map = dynamic(() => import("@/components/Map"), {
-  loading: () => <p className="text-center text-7xl transform translate-y-[300px] ">Loading...</p>,
+  loading: () => (
+    <div className="flex items-center justify-center min-h-screen">
+      <div className="animate-spin rounded-full h-16 w-16 border-t-2 border-b-2 border-gray-900"></div>
+    </div>
+  ),
   ssr: false,
 });
 

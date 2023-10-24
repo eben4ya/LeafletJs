@@ -29,3 +29,16 @@ body {
 html, body, #_next, main {
   height: 100%;
 }
+
+/* .marker-cluster-custom {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  background-color: #fff;
+  transform: translate(-25%, -25%);
+  display: flex;
+  justify-content: center; // idk this just doesn't work
+  align-items: center; // idk this just doesn't work
+  font-weight: 900;
+  font-size: 1.5rem;
+} */
