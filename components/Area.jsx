@@ -3,13 +3,13 @@ import Link from "next/link";
 import { Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css"; // icon property of Marker component will not work without this
 // import Leaflet from "leaflet";
-import { Icon, divIcon, } from "leaflet"; // import icon from leaflet
+import { Icon, divIcon } from "leaflet"; // import icon from leaflet
 import MarkerClusterGroup from "react-leaflet-cluster";
 
 const marker = [
   {
     geoLoc: [-7.773799350856907, 110.37835060458946],
-    title: "GamaForce",
+    title: "GAMAFORCE",
     url: "https://www.google.com/maps/dir/-7.7651462,110.366628/gamaforce+google+map/@-7.7702801,110.364321,15z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x2e7a584aaa2d096b:0xbd125fdd4a20fc71!2m2!1d110.3783514!2d-7.7738059?entry=ttu",
   },
   {
@@ -51,7 +51,9 @@ const Area = ({ title, url }) => {
         <Marker key={index} position={item.geoLoc} icon={markerIcon}>
           <Popup>
             <div className="flex flex-col">
-              <h2>{item.title}</h2> <Link href={item.url} />
+              <Link href={item.url} target="_blank" rel="noopener noreferrer">
+                {item.title}
+              </Link>
             </div>
           </Popup>
         </Marker>
